@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f6f9fc;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #0d0d2a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar #logo {
+    width: 150px;
+    margin-bottom: 40px;
+    transform: translate(10%);
+}
+
+.logo h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    flex-grow: 1;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.sidebar img.icon{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.sidebar nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+.sidebar .welcome {
+    font-size: 14px;
+    border-top: 1px solid #fff3;
+    padding-top: 20px;
+}
+
+.main-content {
+    flex: 1;
+    background-image: url('images/fundoRh.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 0; 
+    overflow: auto; 
+}
+
