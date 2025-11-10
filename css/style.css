@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +21,7 @@ body {
 .body1 {
     width: 50%;
     height: 100%;
-    background: white;
+    background: rgb(255, 255, 255);
     display: grid;
     place-items: center;
 }

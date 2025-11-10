@@ -1,0 +1,127 @@
+<title>Relatório de Funcionários</title>
+<main>
+  <div class="header-report">
+    <h2>📊 Relatório de Funcionários</h2>
+    <button onclick="alert('Atualizar Relatório')">Atualizar</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Pesquisar...">
+  </div>
+
+  <table id="reportTable">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Setor</th>
+        <th>Data de Admissão</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>João Silva</td>
+        <td>123.456.789-00</td>
+        <td>joao@email.com</td>
+        <td>(11) 99999-0000</td>
+        <td>TI</td>
+        <td>01/03/2022</td>
+      </tr>
+      <tr>
+        <td>Maria Souza</td>
+        <td>987.654.321-00</td>
+        <td>maria@email.com</td>
+        <td>(21) 98888-1111</td>
+        <td>Financeiro</td>
+        <td>15/05/2021</td>
+      </tr>
+      <!-- Adicione mais linhas aqui -->
+    </tbody>
+  </table>
+
+  <button class="btn-export" onclick="alert('Exportar relatório')">Exportar Relatório</button>
+
+</main>
+</section>
+<style>
+  .header-report {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .header-report button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #1976d2;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .search-container {
+    margin-bottom: 20px;
+  }
+
+  .search-container input {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+
+  /* Tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  table th,
+  table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  table th {
+    background-color: #1976d2;
+    color: #fff;
+  }
+
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .btn-export {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .btn-export:hover {
+    background-color: #125ca0;
+  }
+
+  /* Responsivo */
+  @media(max-width: 700px) {
+
+    table th,
+    table td {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+  }
+</style>

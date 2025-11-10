@@ -25,10 +25,12 @@
                     <input type="email" placeholder="E-mail">
                 </div>
 
-                <div class="input-group">
-                    <img src="css/images/icons/ic_eyeSlash.svg" alt="Senha" class="icon">
-                    <input type="password" placeholder="Senha">
+                <div class="input-group senha-group">
+                    <img src="css/images/icons/ic_eyeSlash.png" alt="Senha" class="icon" id="toggleSenha">
+                    <input type="password" id="senha" placeholder="Senha">
+                    
                 </div>
+
                 <a href="#" class="forgot-password">Esqueceu a senha?</a>
 
                 <a href="home.html" class="login">LOGIN</a>
@@ -39,10 +41,23 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monoton&family=Rubik+Gemstones&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedan+SC&family=Slabo+27px&family=TASA+Orbiter:wght@400..800&display=swap"
-        rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monoton&family=Rubik+Gemstones&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedan+SC&family=Slabo+27px&family=TASA+Orbiter:wght@400..800&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <script>
+    const senhaInput = document.getElementById("senha");
+        const toggleSenha = document.getElementById("toggleSenha");
+
+        toggleSenha.addEventListener("click", () => {
+            const isPassword = senhaInput.type === "password";
+            senhaInput.type = isPassword ? "text" : "password";
+
+            toggleSenha.src = isPassword
+                ? "css/images/icons/ic_eyeOpen.png"
+                : "css/images/icons/ic_eyeSlash.png" 
+    });
+    </script>
 </body>
 
 </html>

@@ -1,34 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
-    <title>Login</title>
+    <title>Dashboard</title>
     <link href="css/style_base.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+
 </head>
+
 <body>
     <div class="container">
         <aside class="sidebar">
             <img id="logo" src="css/images/logo.png" />
             <nav>
                 <ul>
-                    <li><a href="#"><img src="css/images/icons/ic_home.svg" alt="Início" class="icon">Inicio</a></li>
-                    <li><a href="#"><img src="css/images/icons/ic_newSolicitation.svg" alt="Início" class="icon">Solicitações</a></li>
-                    <li><a href="#"><img src="css/images/icons/ic_employee.svg" alt="Início" class="icon">Funcionários</a></li>
-                    <li><a href="#"><img src="css/images/icons/ic_report.svg" alt="Início" class="icon">Relatório</a></li>
-                    <li><a href="#"><img src="css/images/icons/ic_config.svg" alt="Início" class="icon">Configurações</a></li>
-                    <li><a href="index.html"><img src="css/images/icons/ic_logout.svg" alt="Início" class="icon">Sair</a></li>
+                    <li><a href="home.html" class="nav-link"><img src="css/images/icons/ic_home.svg"
+                                class="icon"><span>Início</span></a>
+                    </li>
+                    <li><a href="request.html" class="nav-link"><img src="css/images/icons/ic_newSolicitation.svg"
+                                class="icon"><span>Solicitações</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            <img src="css/images/icons/ic_employee.svg" class="icon">
+                            <span>Funcionários</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="employees_add.html">Cadastrar</a></li>
+                            <li><a href="employees_edit.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="report.html" class="nav-link"><img src="css/images/icons/ic_report.svg"
+                                class="icon"><span>Relatórios</span></a></li>
+                    <li><a href="settings.html" class="nav-link"><img src="css/images/icons/ic_config.svg"
+                                class="icon"><span>Configurações</span></a></li>
+                    <li><a href="index.html"><img src="css/images/icons/ic_logout.svg"
+                                class="icon"><span>Sair</span></a></li>
                 </ul>
             </nav>
 
-             <div class="welcome">
+            <div class="welcome">
                 <p>👤 Bem-vindo</p>
             </div>
         </aside>
 
-         <main class="main-content">
-            
+
+        <div class="top-bar">
+            <img src="css/images/icons/ic_list.png" class="icons">
+
+            <div class="top-op">
+                <img src="css/images/icons/ic_bell.png" class="icons">
+                <img src="css/images/icons/ic_profile.png" class="icon-profile">
+            </div>
+        </div>
+
+        <main class="main-content" id="main-content">
+            <div id="lottie-background"></div>
         </main>
+
+
     </div>
 
+    <script src="js/main.js"></script>
 </body>
+
 </html>

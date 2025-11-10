@@ -1,0 +1,61 @@
+
+  <link rel="stylesheet" href="css/settings.css">
+  <section class="settings">
+    <div class="header-settings">
+      <h2>⚙️ Configurações</h2>
+      <button class="btn-save">Salvar Alterações</button>
+    </div>
+
+    <div class="settings-container">
+
+      <div class="settings-group">
+        <h3>Perfil do Usuário</h3>
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" placeholder="Seu nome completo">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="email@exemplo.com">
+        </div>
+        <div class="form-group">
+          <label for="password">Nova Senha</label>
+          <input type="password" id="password" placeholder="Digite a nova senha">
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <h3>Preferências</h3>
+        <div class="form-group">
+          <label>Tema</label>
+          <select id="theme">
+            <option>Claro</option>
+            <option>Escuro</option>
+            <option>Sistema</option>
+          </select>
+        </div>
+
+        <div class="form-group toggle">
+          <label>Notificações</label>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="form-group toggle">
+          <label>Modo Compacto</label>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-group danger-zone">
+        <h3>Zona de Risco</h3>
+        <p>Excluir sua conta é uma ação irreversível. Todos os dados serão apagados permanentemente.</p>
+        <button class="btn-danger">Excluir Conta</button>
+      </div>
+    </div>
+  </section>
