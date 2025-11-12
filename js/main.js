@@ -60,16 +60,40 @@ links.forEach(link => {
 });
 
 
+function loadLottieAnimation(containerId, path, preserve = true) {
+    lottie.loadAnimation({
+        container: document.getElementById(containerId),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: path,
+        rendererSettings: preserve ? { preserveAspectRatio: 'xMidYMid slice' } : {}
+    });
+}
+
+loadLottieAnimation('lottie-background', 'css/images/fundo_lottie.json');
+loadLottieAnimation('lottie-login', 'css/images/login_lottie.json');
+
+
 lottie.loadAnimation({
-    container: document.getElementById('lottie-background'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '../css/images/fundo_lottie.json',
-    rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice'
-    }
+  container: document.getElementById('lottie-register'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'css/images/register_lottie.json',
+  rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
 });
+
+lottie.loadAnimation({
+  container: document.getElementById('lottie-body2'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'css/images/register_lottie.json',
+  rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+});
+
+
 
 const sidebar = document.querySelector('.sidebar');
 const topBar = document.querySelector('.top-bar');
@@ -92,21 +116,21 @@ const searchInput = document.getElementById('search');
 const tableElement = document.getElementById('reportTable');
 
 if (searchInput && tableElement) {
-  const table = tableElement.getElementsByTagName('tbody')[0];
-  searchInput.addEventListener('input', function () {
-    const filter = this.value.toLowerCase();
-    const rows = table.getElementsByTagName('tr');
+    const table = tableElement.getElementsByTagName('tbody')[0];
+    searchInput.addEventListener('input', function () {
+        const filter = this.value.toLowerCase();
+        const rows = table.getElementsByTagName('tr');
 
-    for (let i = 0; i < rows.length; i++) {
-      const cells = rows[i].getElementsByTagName('td');
-      let match = false;
-      for (let j = 0; j < cells.length; j++) {
-        if (cells[j].textContent.toLowerCase().includes(filter)) {
-          match = true;
-          break;
+        for (let i = 0; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let match = false;
+            for (let j = 0; j < cells.length; j++) {
+                if (cells[j].textContent.toLowerCase().includes(filter)) {
+                    match = true;
+                    break;
+                }
+            }
+            rows[i].style.display = match ? '' : 'none';
         }
-      }
-      rows[i].style.display = match ? '' : 'none';
-    }
-  });
+    });
 }

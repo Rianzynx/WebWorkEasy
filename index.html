@@ -5,19 +5,26 @@
     <meta charset="utf-8" />
     <title>Login</title>
     <link href="css/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="main-body">
         <div class="body1">
             <div class="content1">
-                <h1>Bem vindo ao WorkEasy</h1>
-                <img src="css/images/fundoRh.jpg" />
+                <h1>Bem vindo ao <span>WorkEasy</span></h1>
+                <div id="lottie-login"></div>
                 <h3>Sua plataforma moderna e eficiente para gestão de chamados</h3>
             </div>
         </div>
 
         <div class="body2">
+            <div id="lottie-body2"></div>
             <img class="logo" src="css/images/logo.png" />
             <form class="login-form">
                 <div class="input-group">
@@ -28,25 +35,44 @@
                 <div class="input-group senha-group">
                     <img src="css/images/icons/ic_eyeSlash.png" alt="Senha" class="icon" id="toggleSenha">
                     <input type="password" id="senha" placeholder="Senha">
-                    
+
                 </div>
 
                 <a href="#" class="forgot-password">Esqueceu a senha?</a>
 
-                <a href="home.html" class="login">LOGIN</a>
-                <a href="home.html" class="register">CADASTRAR</a>
+                <a href="home.html" class="button">
+                    <span>Login</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43">
+                        <polygon points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"></polygon>
+                        <polygon points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"></polygon>
+                        <polygon points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"></polygon>
+                    </svg>
+                </a>
+
+                <a href="register.html" class="button" id="btnCadastrar">
+                    <span>Cadastrar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43">
+                        <polygon points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"></polygon>
+                        <polygon points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"></polygon>
+                        <polygon points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"></polygon>
+                    </svg>
+                </a>
+
             </form>
         </div>
     </div>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monoton&family=Rubik+Gemstones&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedan+SC&family=Slabo+27px&family=TASA+Orbiter:wght@400..800&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monoton&family=Rubik+Gemstones&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedan+SC&family=Slabo+27px&family=TASA+Orbiter:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 
     <script>
-    const senhaInput = document.getElementById("senha");
+        const senhaInput = document.getElementById("senha");
         const toggleSenha = document.getElementById("toggleSenha");
 
         toggleSenha.addEventListener("click", () => {
@@ -55,9 +81,10 @@
 
             toggleSenha.src = isPassword
                 ? "css/images/icons/ic_eyeOpen.png"
-                : "css/images/icons/ic_eyeSlash.png" 
-    });
+                : "css/images/icons/ic_eyeSlash.png"
+        });
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

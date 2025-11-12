@@ -9,7 +9,9 @@ html, body {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Poppins", sans-serif;
+     font-weight: 400;
+     font-style: normal;
     background-color: #f6f9fc;
     color: #333;
 }
@@ -61,7 +63,7 @@ body {
     display: flex;
     align-items: center;  
     justify-content: flex-start;
-    gap: 12px;                
+    gap: px;                
     padding: 10px 15px;
     text-decoration: none;
     color: #fff;
@@ -72,7 +74,7 @@ body {
 
 
 .sidebar nav ul li a:hover {
-  background-color: #264a72;
+  background-color: #6b7886;
   transform: scale(1.08);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   z-index: 5;

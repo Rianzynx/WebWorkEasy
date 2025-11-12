@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="lottie-register"></div>
+
+    <div class="form-container">
+        <form class="form">
+            <p class="title">Cadastrar-se</p>
+            <p class="message">Cadastre-se agora e tenha acesso ao sistema.</p>
+
+            <div class="flex">
+                <label>
+                    <input class="input" type="text" placeholder="" required>
+                    <span>Nome</span>
+                </label>
+            </div>
+
+            <label>
+                <input class="input" type="email" placeholder="" required>
+                <span>Email</span>
+            </label>
+
+            <label>
+                <input class="input" type="tel" placeholder="" required>
+                <span>Telefone</span>
+            </label>
+
+            <label>
+                <input class="input" type="text" placeholder="" required>
+                <span>Endereço</span>
+            </label>
+
+            <label>
+                <input class="input" type="text" placeholder="" required>
+                <span>CPF</span>
+            </label>
+            <div class="flex">
+                <label>
+                    <select class="input" required>
+                        <option value="" disabled selected hidden></option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <span>Gênero</span>
+                </label>
+
+                <label>
+                    <input class="input" type="date" required>
+                    <span>Data de Nascimento</span>
+                </label>
+            </div>
+            <a href="register.html" class="button" id="btnCadastrar">
+                    <span>Cadastrar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43">
+                        <polygon points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"></polygon>
+                        <polygon points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"></polygon>
+                        <polygon points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"></polygon>
+                    </svg>
+                </a>
+            <p class="signin">Já tem uma conta? <a href="index.html">Login</a></p>
+        </form>
+    </div>
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
